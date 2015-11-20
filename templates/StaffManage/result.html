@@ -1,0 +1,41 @@
+<div class="panel panel-default">
+  <div class="panel-heading" role="tab" id="headingResult">
+    <h4 class="panel-title">
+      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseResult" aria-expanded="true" aria-controls="collapseResult">
+        Result
+      </a>
+    </h4>
+  </div>
+  <div id="collapseResult" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingResult">
+    <table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>SEX</th>
+            <th>TYPE</th>
+            <th>REVISE</th>
+            <th>DEL</th>
+        </tr>
+    </thead>
+      <tbody id="table">
+{% comment %}        {% for row in result %}
+            <tr>
+                <td>{{ row.ID }}</td>
+                <td class="name">{{ row.NAME }}</td>
+                <td>{{ row.SEX }}</td>
+                <td>{{ row.TYPE }}</td>
+                <td><a href type="button" data-toggle="modal" data-target="#myModal"  onclick=
+                    "
+                    $('#myModal').modal('shown.bs.modal', function(){
+                      alert(this);
+                    })
+
+                 "><span class="glyphicon glyphicon-pencil"></span></a></td>
+                <td><a href><span class="glyphicon glyphicon-trash" onclick='alert("hello");'></span> </a></td>
+            </tr>
+        {% endfor %}{% endcomment %}
+      </tbody>
+    </table>
+  </div>
+</div>

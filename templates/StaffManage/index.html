@@ -1,0 +1,33 @@
+{% extends 'StaffManage/base.html' %}
+
+{% block title %}Staff Manage System{% endblock %}
+
+{% block content %}
+  <div class="col-md-9">
+    <h1 class="text-center">Staff Manage System</h1>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#vanilla" aria-controls="vanilla" role="tab" data-toggle="tab">section1</a></li>
+    </ul>
+    <!-- Tab Panes -->
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="vanilla">
+        {% include 'StaffManage/forms.html' %}
+        {% include 'StaffManage/result.html' %}
+      </div>
+    </div>
+  </div>
+
+  {% include 'StaffManage/dialog.html' %}
+{% endblock %}
+
+{% block javascript %}
+  <script src="/static/js/index.js"></script>
+  <script>
+    $(function(){
+      createTable({{ result|safe }});
+    })
+  </script>
+
+{% endblock %}
+
