@@ -1,6 +1,6 @@
 from django.shortcuts import render
 import datetime
-import models
+from StaffManage import models
 import traceback
 import warnings
 from django.http import Http404
@@ -47,7 +47,7 @@ def add_user_info_list(request):
 
         new_user= models.UserInfo(id=make_uuid_without_hypen(),name=user_name, sex=user_sex, type=user_type)
         new_user.save()
-        print json.dumps(model_to_dict(new_user))
+        print(json.dumps(model_to_dict(new_user)))
         return HttpResponse(json.dumps(model_to_dict(new_user)), content_type='application/json')
 
     except:

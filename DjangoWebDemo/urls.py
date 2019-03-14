@@ -18,7 +18,7 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^main/$', 'StaffManage.views.index', name='StaffManage'),
+    url(r'^$', 'StaffManage.views.index', name='StaffManage'),
     url(r'^add_user_info_list$','StaffManage.views.add_user_info_list', name='add_user_info_list'),
     url(r'^delete_user_info_list$','StaffManage.views.delete_user_info_list', name='delete_user_info_list'),
     url(r'^update_user_info_list$','StaffManage.views.update_user_info_list', name='update_user_info_list'),
